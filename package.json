@@ -12,6 +12,7 @@
     "@react-three/drei": "^9.116.2",
     "@react-three/fiber": "^8.17.10",
     "aws-amplify": "^6.8.2",
+    "gsap": "^3.12.5",
     "jsdom": "^25.0.1",
     "next": "15.0.3",
     "react": "^18.3.1",
