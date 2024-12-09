@@ -1,5 +1,5 @@
 /* General Section Styling */
-@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Shadows+Into+Light&display=swap');
 
 .section {
     display: flex;
@@ -7,14 +7,77 @@
     justify-content: center;
     height: 100vh;
     position: relative;
-    font-family: 'Cabin', sans-serif;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 8vmin;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
     color: #ffeded;
     text-transform: uppercase;
     font-size: 7vmin;
     padding-left: 10%;
     padding-right: 10%;
   }
-  
+
+  .section2 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    font-family: "Ojuju", serif;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 4vmin;
+    font-weight:600;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 7vmin;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .section3 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    font-family: "Ojuju", serif;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 4vmin;
+    font-weight:600;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   /* Scoped nth-child selector */
   .section:nth-child(odd) {
     justify-content: flex-end;
@@ -79,11 +142,15 @@
   }
   
   .hero p {
-    font-size: 1.5rem;
+    font-size: 24px;
     max-width: 600px;
     line-height: 1.6;
   }
   
+  .subtitle {
+    font-size: 10px;
+  }
+
   /* Responsive Styling */
   @media (max-width: 768px) {
     .section {

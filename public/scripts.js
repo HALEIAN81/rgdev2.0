@@ -39,6 +39,13 @@ const initThreeJsWithModels = () => {
             }
           });
 
+          const pointLight = new THREE.PointLight(0xffffff, 5000,0.1); // Adjust color, intensity, and distance
+
+          // Position the point light relative to the model (optional)
+          pointLight.position.set(1, 2, 90); // Adjust X, Y, Z for light position
+
+          model.add(pointLight);
+
           scene.add(model);
           resolve(model);
         },

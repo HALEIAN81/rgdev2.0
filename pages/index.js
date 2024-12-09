@@ -37,11 +37,11 @@ export default function Home() {
       <canvas className="webgl"></canvas>
 
       {/* Other Sections */}
-      <section id="projects" className={styles.section}>
+      <section id="projects" className={styles.section2}>
         <h2>My Projects</h2>
         <p>Explore my work and creative endeavors.</p>
       </section>
-      <section id="contact" className={styles.section}>
+      <section id="contact" className={styles.section3}>
         <h2>Contact Me</h2>
         <p>Feel free to reach out for collaborations or inquiries.</p>
       </section>
