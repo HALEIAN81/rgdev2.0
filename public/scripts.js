@@ -13,6 +13,13 @@ const initThreeJsWithModels = () => {
   const objectsDistance = 4;
   const sectionModels = []; // Array to store models
 
+  // Initial camera positions for each model
+  const cameraPositions = {
+    model1: new THREE.Vector3(1.5, 0, 10), // Adjust X, Y, Z for model1
+    model2: new THREE.Vector3(-2, -objectsDistance, 15), // Adjust X, Y, Z for model2
+    model3: new THREE.Vector3(2, -objectsDistance * 2, 35), // Adjust X, Y, Z for model3
+  };
+
   // GLTF Loader to load models
   const loader = new GLTFLoader();
 
@@ -28,7 +35,7 @@ const initThreeJsWithModels = () => {
           // Optional: Apply wireframe material or adjust material
           model.traverse((child) => {
             if (child.isMesh) {
-              child.material.wireframe = true;
+              child.material.wireframe = false;
             }
           });
 
@@ -42,9 +49,9 @@ const initThreeJsWithModels = () => {
 
   // Load models into the scene
   Promise.all([
-    loadModel('/models/model1.glb', new THREE.Vector3(2, 0, 0)),
-    loadModel('/models/model2.glb', new THREE.Vector3(-2, -objectsDistance, 0)),
-    loadModel('/models/model3.glb', new THREE.Vector3(2, -objectsDistance * 2, 0)),
+    loadModel('/models/model1.glb', new THREE.Vector3(2.2, 0, 5)),
+    loadModel('/models/model2.glb', new THREE.Vector3(-2, -objectsDistance, 5)),
+    loadModel('/models/model3.glb', new THREE.Vector3(2, -objectsDistance * 3, 0.01)),
   ])
     .then((models) => {
       sectionModels.push(...models);
@@ -59,7 +66,7 @@ const initThreeJsWithModels = () => {
   scene.add(directionalLight);
 
   // Particles
-  const particlesCount = 200;
+  const particlesCount = 250;
   const positions = new Float32Array(particlesCount * 3);
 
   for (let i = 0; i < particlesCount; i++) {
@@ -74,7 +81,7 @@ const initThreeJsWithModels = () => {
 
   const particlesMaterial = new THREE.PointsMaterial({
     color: '#ffeded',
-    size: 0.03,
+    size: 0.05,
     sizeAttenuation: true,
   });
 
@@ -103,7 +110,7 @@ const initThreeJsWithModels = () => {
   scene.add(cameraGroup);
 
   const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100);
-  camera.position.z = 6;
+  camera.position.z = 10;
   cameraGroup.add(camera);
 
   // Renderer
@@ -128,9 +135,9 @@ const initThreeJsWithModels = () => {
       gsap.to(sectionModels[currentSection].rotation, {
         duration: 1.5,
         ease: 'power2.inOut',
-        x: '+=6',
-        y: '+=3',
-        z: '+=1.5',
+        // x: '+=6',
+        // y: '+=3',
+        // z: '+=1.5',
       });
     }
   });
@@ -157,9 +164,17 @@ const initThreeJsWithModels = () => {
     cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 5 * deltaTime;
     cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime;
 
-    sectionModels.forEach((model) => {
-      model.rotation.x += deltaTime * 0.1;
-      model.rotation.y += deltaTime * 0.12;
+    sectionModels.forEach((model, index) => {
+      if (index === 0) { // For model1.glb
+        model.rotation.x += deltaTime * 0.1; // Adjust X rotation as needed
+        model.rotation.y += deltaTime * 0.12; // Adjust Y rotation as needed
+      } else if (index === 1) { // For model2.glb
+        model.rotation.x += deltaTime * 0.1; // Adjust X rotation as needed
+        model.rotation.y += deltaTime * 0.12; // Adjust Y rotation as needed
+      } else if (index === 2) { // For model3.glb
+        model.rotation.x += 0; // Adjust X rotation as needed
+        model.rotation.y += 0; // Adjust Y rotation as needed
+      }
     });
 
     renderer.render(scene, camera);
