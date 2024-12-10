@@ -71,43 +71,43 @@ export default function Home() {
           <div className={styles.projectCard}>
           <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
             <h5>Project 1</h5>
-            <p>Description of Project 1</p>
+            <p>Arsenal Sales Training</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
             <h5>Project 2</h5>
-            <p>Description of Project 2</p>
+            <p>Labsender</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
             <h5>Project 3</h5>
-            <p>Description of Project 3</p>
+            <p>Delta Phoenix</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
             <h5>Project 4</h5>
-            <p>Description of Project 4</p>
+            <p>Love On a Leash</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
             <h5>Project 5</h5>
-            <p>Description of Project 5</p>
+            <p>TS Reports</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
             <h5>Project 6</h5>
-            <p>Description of Project 6</p>
+            <p>Frontier.Clinic</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
             <h5>Project 7</h5>
-            <p>Description of Project 7</p>
+            <p>Hale Verde.com</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
@@ -125,17 +125,17 @@ export default function Home() {
   <form onSubmit={handleSubmit}>
     <div className="form-group">
       <label  htmlFor="name">Name:</label>
-      <input  type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+      <input  type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" className="form-input"/>
     </div>
     <div className="form-group">
       <label  htmlFor="email">Email:</label>
-      <input  type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+      <input  type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address"/>
     </div>
     <div className="form-group">
       <label  htmlFor="message">Message:</label>
-      <textarea id="message" name="message" value={formData.message} onChange={handleChange}></textarea>
+      <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Write your message here"></textarea>
     </div>
-    <button className="send-btn" type="submit">Send Message</button>
+    <button className="send-btn" type="submit">SEND</button>
   </form>
 </section>
 {/* <section id="projects" className={styles.section5}>
