@@ -32,22 +32,28 @@ export default function Home() {
     initThreeJsWithModels(); // Initialize the updated Three.js scene
   }, []);
 
+  const handleNavClick = (e) => {
+    e.preventDefault();
+    const targetSection = document.getElementById(e.target.getAttribute('href').slice(1));
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div>
       {/* Navigation Bar */}
       <nav className={styles.navbar}>
         <ul className={styles.navLinks}>
           <li>
-            <a href="#hero">Home</a>
+            <a href="#hero" onClick={handleNavClick}>Home</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects" onClick={handleNavClick}>Projects</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={handleNavClick}>Contact</a>
           </li>
           <li>
-            <a href="#resume">Resume</a>
+            <a href="#resume" onClick={handleNavClick}>Resume</a>
           </li>
         </ul>
       </nav>
@@ -135,7 +141,7 @@ export default function Home() {
       <label  htmlFor="message">Message:</label>
       <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Write your message here"></textarea>
     </div>
-    <button className="send-btn" type="submit">SEND</button>
+    <button className="send-btn" type="submit"><span>🛸</span> SEND</button>
   </form>
 </section>
 {/* <section id="projects" className={styles.section5}>

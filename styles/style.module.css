@@ -359,12 +359,18 @@ color: dodgerblue;
     color: dodgerblue;
   }
 
+
     
     .section4 .send-btn {
       background-color: #007bff;
       color: #fff;
       border: 5px solid white;/* Make the button text bold */
     }
+
+
+  .send-btn span{
+    font-size: 50px;
+  }
 
   /* Responsive Styling */
   @media (max-width: 768px) {
