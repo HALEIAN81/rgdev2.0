@@ -56,7 +56,7 @@ const initThreeJsWithModels = () => {
 
   // Load models into the scene
   Promise.all([
-    loadModel('/models/model1.glb', new THREE.Vector3(2.2, 0, 5)),
+    loadModel('/models/model1.glb', new THREE.Vector3(1.4, 0, 7)),
     loadModel('/models/model2.glb', new THREE.Vector3(-2, -objectsDistance, 5)),
     loadModel('/models/model3.glb', new THREE.Vector3(2, -objectsDistance * 3, 0.01)),
   ])
@@ -179,8 +179,10 @@ const initThreeJsWithModels = () => {
         model.rotation.x += deltaTime * 0.1; // Adjust X rotation as needed
         model.rotation.y += deltaTime * 0.12; // Adjust Y rotation as needed
       } else if (index === 2) { // For model3.glb
-        model.rotation.x += 0; // Adjust X rotation as needed
-        model.rotation.y += 0; // Adjust Y rotation as needed
+        model.rotation.x += deltaTime * 0.1; // Adjust X rotation as needed
+        model.rotation.y += deltaTime * 0.12; 
+        // model.rotation.x += 0; // Adjust X rotation as needed
+        // model.rotation.y += 0; // Adjust Y rotation as needed
       }
     });
 

@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 30vh;
     position: relative;
     font-family: "Shadows Into Light", cursive;
     font-weight: 400;
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     position: relative;
     font-family: "Shadows Into Light", cursive;
     font-weight: 400;
@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+
     position: relative;
     font-family: "Ojuju", serif;
     color: #ffeded;
@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     position: relative;
     font-family: "Shadows Into Light", cursive;
     font-weight: 400;
@@ -68,7 +68,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     position: relative;
     font-family: "Ojuju", serif;
     color: #ffeded;
@@ -78,6 +77,98 @@
     padding-left: 10%;
     padding-right: 10%;
   }
+
+  .section3 h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: "Ojuju", serif;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 4vmin;
+    font-weight:600;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .section3 .projectCard h5{
+ font-size: 30px;
+  }
+
+  .section3 .projectCard p{
+    font-size: 18px;
+     }
+
+    .section3 .projectCard a{
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+       }
+
+.section4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120vh;
+        position: relative;
+        font-family: "Shadows Into Light", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffeded;
+        text-transform: uppercase;
+        font-size: 8vmin;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+
+      .section4 h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        position: relative;
+        font-family: "Shadows Into Light", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffeded;
+        text-transform: uppercase;
+        font-size: 8vmin;
+        margin-right: 500px;
+      }
+
+      .section4 form {
+        border: 1px solid white;
+        padding:30px;
+        border-radius: 10px;
+      }
+
+      .section4 label {
+        font-size: 24px;
+    margin-right: 30px;
+    color: dodgerblue;
+      }
+
+      .section4 button {
+        background-color: dodgerblue;
+      }
+
+      .section5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        position: relative;
+        font-family: "Shadows Into Light", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffeded;
+        text-transform: uppercase;
+        font-size: 8vmin;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+
   /* Scoped nth-child selector */
   .section:nth-child(odd) {
     justify-content: flex-end;
@@ -146,9 +237,78 @@
     max-width: 600px;
     line-height: 1.6;
   }
+
+  .projectCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   
-  .subtitle {
-    font-size: 10px;
+  .projectCard {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px; /* Adjust the width as needed */
+    box-shadow: 0 1px 20px dodgerblue;
+    height: 450px;
+    text-align: center;
+  }
+  
+  .projectCard h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .projectCard p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .projectCard a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+  }
+
+  .projectCard img {
+    width: 200px;
+    height: 150px;
+  }
+
+  /* Form styles */
+
+  #contactForm {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .section3 .label-text {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .input, .textarea {
+    width: 80%; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  .textarea {
+    resize: vertical;
+  }
+  
+  .section4 .send-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Make the button text bold */
   }
 
   /* Responsive Styling */
