@@ -19,7 +19,8 @@
 
   .section h1 {
     margin-right: 500px;
-    margin-top: -200px;
+    margin-top: 0px;
+    font-size: 64px;
   }
 
   .section h2 {
@@ -295,7 +296,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 200vh;
   width: 100%;
   position: relative;
   font-family: "Shadows Into Light", cursive;
@@ -304,7 +305,7 @@
   color: #ffeded;
   text-transform: uppercase;
   font-size: 8vmin;
-  margin-right: 500px;
+  margin-right: 300px;
 }
 
 .section4 form {
@@ -315,7 +316,8 @@
   padding-bottom: 10px;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  margin-right: 70px;
+  margin-right: 40px;
+  margin-top: 450px;
 }
 
 .section4 form-group {
@@ -324,14 +326,14 @@
 }
 
 .section4 form:hover {
-  border: 1px solid white;
+  border: 2px solid white;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 10px;
   transform: scale(1.1);
-  box-shadow: 0 2px 5px dodgerblue;
+  box-shadow: 0 5px 10px dodgerblue;
 }
 
 .section4 label {
