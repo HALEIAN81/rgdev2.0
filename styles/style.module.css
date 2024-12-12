@@ -16,6 +16,24 @@
     padding-left: 10%;
     padding-right: 10%;
   }
+
+  .section h1 {
+    margin-right: 500px;
+    margin-top: -200px;
+  }
+
+  .section h2 {
+    font-size: 36px;
+    margin-right: 500px;
+    padding-bottom: 30px;
+  }
+
+  .section h3 {
+    font-size: 36px;
+    margin-right: 500px;
+    width: 45%;
+    padding-bottom: 50px;
+  }
   
   .section2 {
     display: flex;

@@ -60,8 +60,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <header id="hero" className={`${styles.section} ${styles.hero}`}>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my projects and get in touch!</p>
+      <h1>Full-Stack Mastery</h1>
+<h2>Elevating Digital Experiences</h2>
+<h3>I'm a skilled developer specializing in React, Vue, Angular, ThreeJs.</h3>
       </header>
 
       {/* Three.js Canvas */}
