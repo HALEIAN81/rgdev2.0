@@ -62,7 +62,7 @@ export default function Home() {
       <header id="hero" className={`${styles.section} ${styles.hero}`}>
       <h1>Full-Stack Mastery</h1>
 <h2>Elevating Digital Experiences</h2>
-<h3>I'm a skilled developer specializing in React, Vue, Angular, ThreeJs.</h3>
+<h3>A skilled developer specializing in React, Vue, Angular, ThreeJs.</h3>
 <h3>and backend technologies like Node.js, Python (Django, Flask), and PHP (Laravel).</h3>
       </header>
 
@@ -77,49 +77,97 @@ export default function Home() {
       <section id="newSection2" className={styles.section3}>
         <div className={styles.projectCards}>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 1</h5>
             <p>Arsenal Sales Training</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 2</h5>
             <p>Labsender</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 3</h5>
             <p>Delta Phoenix</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 4</h5>
             <p>Love On a Leash</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 5</h5>
             <p>TS Reports</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 6</h5>
             <p>Frontier.Clinic</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 7</h5>
             <p>Hale Verde.com</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
-          <img className="project-img" src="../images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" alt="Project 1 Image" />
+          <Image 
+        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
+        alt="Project 1 Image" 
+        width={500} 
+        height={300} 
+        className="project-img" 
+      />
             <h5>Project 8</h5>
             <p>Description of Project 8</p>
             <a href="#">View Project</a>
