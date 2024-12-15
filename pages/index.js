@@ -1,6 +1,7 @@
 import styles from '../styles/style.module.css';
 import initThreeJsWithModels from '../public/scripts.js'; // Updated import
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [formData, setFormData] = useState({
