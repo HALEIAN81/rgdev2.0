@@ -79,96 +79,96 @@ export default function Home() {
         <div className={styles.projectCards}>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 1</h5>
             <p>Arsenal Sales Training</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 2</h5>
             <p>Labsender</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 3</h5>
             <p>Delta Phoenix</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 4</h5>
             <p>Love On a Leash</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 5</h5>
             <p>TS Reports</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 6</h5>
             <p>Frontier.Clinic</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 7</h5>
             <p>Hale Verde.com</p>
             <a href="#">View Project</a>
           </div>
           <div className={styles.projectCard}>
           <Image 
-        src="/images/Gemini_Generated_Image_eztkbyeztk.jpeg" 
-        alt="Project 1 Image" 
-        width={500} 
-        height={300} 
-        className="project-img" 
-      />
+  src="/images/Gemini_Generated_Image_eztkbyeztkbyeztk.jpeg" 
+  alt="Project 1 Image" 
+  width={500} 
+  height={300} 
+  className="project-img" 
+/>
             <h5>Project 8</h5>
             <p>Description of Project 8</p>
             <a href="#">View Project</a>
