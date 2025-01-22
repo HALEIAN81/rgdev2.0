@@ -27,6 +27,7 @@
     font-size: 36px;
     margin-right: 500px;
     padding-bottom: 30px;
+    color: lime;
   }
 
   .section h3 {
@@ -103,7 +104,8 @@
     justify-content: center;
     position: relative;
     font-family: "Ojuju", serif;
-    color: #ffeded;
+    color: lime;
+    
     text-transform: uppercase;
     font-size: 4vmin;
     font-weight:600;
@@ -135,7 +137,7 @@
         font-family: "Shadows Into Light", cursive;
         font-weight: 400;
         font-style: normal;
-        color: #ffeded;
+        color: lime;
         text-transform: uppercase;
         font-size: 8vmin;
         padding-left: 10%;
@@ -176,7 +178,7 @@
   }
   
   .navLinks a {
-    color: white;
+    color: lime;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
@@ -285,7 +287,7 @@
   font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   font-style: normal;
-  color: #ffeded;
+  color: lime;
   text-transform: uppercase;
   font-size: 8vmin;
   padding-left: 10%;
@@ -302,7 +304,7 @@
   font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   font-style: normal;
-  color: #ffeded;
+  color: lime;
   text-transform: uppercase;
   font-size: 8vmin;
   margin-right: 300px;
@@ -410,4 +412,93 @@ color: dodgerblue;
       font-size: 16px;
     }
   }
-  
+
+/* Responsive Styling */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .section, .section2, .section3, .section4, .section5 {
+    font-size: 2vmin;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+  }
+
+  .section h1, .section h2, .section h3 {
+    margin-right: 100px;
+    font-size: 36px;
+  }
+
+  .section3 .projectCard h5, .section3 .projectCard p, .section3 .projectCard a {
+    font-size: 20px;
+  }
+
+  .navLinks a {
+    font-size: 16px;
+    padding-right: 40px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .projectCard {
+    width: 100%;
+  }
+
+  .section4 h2 {
+    font-size: 6vmin;
+    margin-right: 0;
+  }
+
+  .section4 textarea {
+    width: 100%;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .section, .section2, .section3, .section4, .section5 {
+    font-size: 4vmin;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section h1, .section h2, .section h3 {
+    font-size: 28px;
+    margin-right: 0;
+  }
+
+  .navLinks {
+    flex-direction: column;
+  }
+
+  .navLinks a {
+    font-size: 14px;
+    padding-right: 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .projectCard {
+    width: 90%;
+  }
+
+  .section4 button {
+    font-size: 24px;
+  }
+
+  .section4 input, .section4 textarea {
+    width: 100%;
+  }
+}

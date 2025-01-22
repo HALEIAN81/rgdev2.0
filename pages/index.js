@@ -61,10 +61,13 @@ export default function Home() {
 
       {/* Hero Section */}
       <header id="hero" className={`${styles.section} ${styles.hero}`}>
-      <h1>Full-Stack Mastery</h1>
-<h2>Elevating Digital Experiences</h2>
-<h3>A skilled developer specializing in React, Vue, Angular, ThreeJs.</h3>
-<h3>and backend technologies like Node.js, Python (Django, Flask), and PHP (Laravel).</h3>
+
+<h1>Crafting Immersive Digital Worlds</h1>
+<h2>Solutions that Engage and Delight</h2>
+<h3>I'm a full-stack developer with a passion for building high-quality web applications. 
+    My expertise spans the entire development lifecycle, from front-end experiences with React, 
+    Vue, and Angular to robust backends powered by Node.js, Python (Django, Flask), and PHP (Laravel).
+    </h3>
       </header>
 
       {/* Three.js Canvas */}

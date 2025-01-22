@@ -12,18 +12,11 @@ const initThreeJsWithModels = () => {
 
   const objectsDistance = 4;
   const sectionModels = []; // Array to store models
+  const mixers = []; // Array to store AnimationMixers
 
-  // Initial camera positions for each model
-  const cameraPositions = {
-    model1: new THREE.Vector3(1.5, 0, 10), // Adjust X, Y, Z for model1
-    model2: new THREE.Vector3(-2, -objectsDistance, 15), // Adjust X, Y, Z for model2
-    model3: new THREE.Vector3(2, -objectsDistance * 2, 35), // Adjust X, Y, Z for model3
-  };
-
-  // GLTF Loader to load models
   const loader = new GLTFLoader();
 
-  // Function to load models and return a promise
+  // Function to load models and setup animations
   const loadModel = (url, position) =>
     new Promise((resolve, reject) => {
       loader.load(
@@ -32,21 +25,24 @@ const initThreeJsWithModels = () => {
           const model = gltf.scene;
           model.position.copy(position);
 
-          // Optional: Apply wireframe material or adjust material
+          // Traverse and configure materials
           model.traverse((child) => {
             if (child.isMesh) {
               child.material.wireframe = false;
             }
           });
 
-          const pointLight = new THREE.PointLight(0xffffff, 5000,0.1); // Adjust color, intensity, and distance
-
-          // Position the point light relative to the model (optional)
-          pointLight.position.set(1, 2, 90); // Adjust X, Y, Z for light position
-
-          model.add(pointLight);
-
           scene.add(model);
+
+          // Set up animations if available
+          if (gltf.animations.length > 0) {
+            const mixer = new THREE.AnimationMixer(model);
+            gltf.animations.forEach((clip) => {
+              mixer.clipAction(clip).play();
+            });
+            mixers.push(mixer);
+          }
+
           resolve(model);
         },
         undefined,
@@ -54,7 +50,7 @@ const initThreeJsWithModels = () => {
       );
     });
 
-  // Load models into the scene
+  // Load models
   Promise.all([
     loadModel('/models/model1.glb', new THREE.Vector3(1.4, 0, 7)),
     loadModel('/models/model2.glb', new THREE.Vector3(-2, -objectsDistance, 5)),
@@ -67,7 +63,7 @@ const initThreeJsWithModels = () => {
       console.error('Error loading models:', error);
     });
 
-  // Directional Light
+  // Lights
   const directionalLight = new THREE.DirectionalLight('#ffffff', 3);
   directionalLight.position.set(1, 1, 0);
   scene.add(directionalLight);
@@ -142,9 +138,8 @@ const initThreeJsWithModels = () => {
       gsap.to(sectionModels[currentSection].rotation, {
         duration: 1.5,
         ease: 'power2.inOut',
-        // x: '+=6',
-        // y: '+=3',
-        // z: '+=1.5',
+        x: '+=0.5',
+        y: '+=0.5',
       });
     }
   });
@@ -157,13 +152,12 @@ const initThreeJsWithModels = () => {
 
   // Animate
   const clock = new THREE.Clock();
-  let previousTime = 0;
 
   const tick = () => {
     const elapsedTime = clock.getElapsedTime();
-    const deltaTime = elapsedTime - previousTime;
-    previousTime = elapsedTime;
+    const deltaTime = clock.getDelta();
 
+    // Update camera position
     camera.position.y = (-scrollY / sizes.height) * objectsDistance;
 
     const parallaxX = cursor.x * 0.5;
@@ -171,20 +165,13 @@ const initThreeJsWithModels = () => {
     cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 5 * deltaTime;
     cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime;
 
-    sectionModels.forEach((model, index) => {
-      if (index === 0) { // For model1.glb
-        model.rotation.x += deltaTime * 0.1; // Adjust X rotation as needed
-        model.rotation.y += deltaTime * 0.12; // Adjust Y rotation as needed
-      } else if (index === 1) { // For model2.glb
-        model.rotation.x += deltaTime * 0.1; // Adjust X rotation as needed
-        model.rotation.y += deltaTime * 0.12; // Adjust Y rotation as needed
-      } else if (index === 2) { // For model3.glb
-        model.rotation.x += deltaTime * 0.1; // Adjust X rotation as needed
-        model.rotation.y += deltaTime * 0.12; 
-        // model.rotation.x += 0; // Adjust X rotation as needed
-        // model.rotation.y += 0; // Adjust Y rotation as needed
-      }
+    // Update models' custom rotations
+    sectionModels.forEach((model) => {
+      model.rotation.y += deltaTime * 0.1; // Custom rotation speed
     });
+
+    // Update animations
+    mixers.forEach((mixer) => mixer.update(deltaTime));
 
     renderer.render(scene, camera);
     window.requestAnimationFrame(tick);
