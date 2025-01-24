@@ -160,6 +160,25 @@
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.showMenu {
+  display: flex !important;
+}
   
   .navLinks {
     display: flex;
@@ -476,6 +495,20 @@ color: dodgerblue;
 
   .section4 textarea {
     width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    width: 100%;
+    text-align: center;
   }
 }
 

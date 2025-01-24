@@ -1,5 +1,5 @@
 import styles from '../styles/style.module.css';
-import initThreeJsWithModels from '../public/scripts.js'; // Updated import
+import initThreeJsWithModels from '../public/scripts.js';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
@@ -10,6 +10,8 @@ export default function Home() {
     message: '',
   });
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,43 +21,35 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send email or trigger API call
     console.log(formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+    setFormData({ name: '', email: '', message: '' });
   };
 
   useEffect(() => {
-    initThreeJsWithModels(); // Initialize the updated Three.js scene
+    initThreeJsWithModels();
   }, []);
 
   const handleNavClick = (e) => {
     e.preventDefault();
+    setMenuOpen(false);
     const targetSection = document.getElementById(e.target.getAttribute('href').slice(1));
-    targetSection.scrollIntoView({ behavior: "smooth" });
-  }
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div>
       {/* Navigation Bar */}
       <nav className={styles.navbar}>
-        <ul className={styles.navLinks}>
-          <li>
-            <a href="#hero" onClick={handleNavClick}>Home</a>
-          </li>
-          <li>
-            <a href="#projects" onClick={handleNavClick}>Projects</a>
-          </li>
-          <li>
-            <a href="#contact" onClick={handleNavClick}>Contact</a>
-          </li>
-          <li>
-            <a href="#resume" onClick={handleNavClick}>Resume</a>
-          </li>
+        <div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
+          <div className={menuOpen ? styles.barActive : styles.bar}></div>
+          <div className={menuOpen ? styles.barActive : styles.bar}></div>
+          <div className={menuOpen ? styles.barActive : styles.bar}></div>
+        </div>
+        <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ''}`}>
+          <li><a href="#hero" onClick={handleNavClick}>Home</a></li>
+          <li><a href="#projects" onClick={handleNavClick}>Projects</a></li>
+          <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
+          <li><a href="#resume" onClick={handleNavClick}>Resume</a></li>
         </ul>
       </nav>
 
