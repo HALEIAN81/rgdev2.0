@@ -52,9 +52,9 @@ const initThreeJsWithModels = () => {
 
   // Load models
   Promise.all([
-    loadModel('/models/model1.glb', new THREE.Vector3(1.4, 0, 7)),
-    loadModel('/models/model2.glb', new THREE.Vector3(-2, -objectsDistance, 5)),
-    loadModel('/models/model3.glb', new THREE.Vector3(2, -objectsDistance * 3, 0.01)),
+    loadModel('/models/model1.glb', new THREE.Vector3(0.95, 0, 7)),
+    loadModel('/models/model2.glb', new THREE.Vector3(-2, -objectsDistance * 1.5, 0.1)),
+    loadModel('/models/model3.glb', new THREE.Vector3(2, -objectsDistance * 3.7, 0.001)),
   ])
     .then((models) => {
       sectionModels.push(...models);

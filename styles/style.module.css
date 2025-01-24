@@ -413,12 +413,24 @@ color: dodgerblue;
     font-size: 50px;
   }
 
+  .webgl {
+    width: 0%;
+    height: 200vh;
+    display: block;
+  }
+
   /* Responsive Styling */
   @media (max-width: 768px) {
     .section {
       font-size: 1vmin;
     }
-  
+
+    .webgl {
+      width: 50%;
+      height: 70vh; /* Adjust height for smaller screens */
+  }
+
+
     .hero h1 {
       font-size: 3rem;
     }
@@ -445,8 +457,12 @@ color: dodgerblue;
     height: 80%;
   }
 
+  .webgl {
+    height: 50vh; /* Further reduce height for mobile screens */
+}
+
   .section2, .section3 {
-    font-size: 2vmin;
+    font-size: 4vmin;
     padding-top: 100px;
     padding-left: 5%;
     padding-right: 5%;
@@ -458,7 +474,6 @@ color: dodgerblue;
     padding-top: 100px;
     padding-left: 5%;
     padding-right: 5%;
-    height: 50%;
   }
 
   .section h1, .section h2, .section h3 {
